@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Foundation
 
 @main
 struct Daily_PlannerApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+            WindowGroup {
+                ContentView()
+                    .preferredColorScheme(.dark)
+            }
     }
 }
+
