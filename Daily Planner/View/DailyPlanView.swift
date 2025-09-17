@@ -12,11 +12,11 @@ struct DailyPlanView: View {
     @State private var selectedDate = Date()
     @State private var showingDatePicker = false
     
-   
-    @State private var reflectionText = ""
+       @State private var reflectionText = ""
     @State private var showReflectionEditor = false
     
     private let quotes = [
+
         "Small steps every day lead to big results.",
         "Stay consistent, success will follow.",
         "Focus on progress, not perfection.",

@@ -27,9 +27,9 @@ struct Task: Identifiable, Codable {
         
         var color: Color {
             switch self {
-            case .low: return .gray
-            case .normal: return .accentBlue 
-            case .high: return .red
+            case .low: return .priorityLow
+            case .normal: return .priorityMedium
+            case .high: return .priorityHigh
             }
         }
     }

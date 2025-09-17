@@ -220,15 +220,28 @@ import SwiftUI
 import SwiftUI
 
 extension Color {
-    static let accentBlue = Color.blue
-    static let accentPurple = Color.purple
-    static let accentGreen = Color.green
-    static let accentOrange = Color.orange
-    static let backgroundPrimary = Color.black
-    static let backgroundSecondary = Color(white: 0.1)
-    static let cardBackground = Color(white: 0.15)
-
+    // Primary theme colors - Enhanced dark theme
+    static let accentBlue = Color(red: 0.4, green: 0.7, blue: 1.0)        // #66B3FF
+    static let accentPurple = Color(red: 0.6, green: 0.4, blue: 1.0)      // #9966FF
+    static let accentGreen = Color(red: 0.3, green: 0.8, blue: 0.4)       // #4DCC66
+    static let accentOrange = Color(red: 1.0, green: 0.6, blue: 0.2)      // #FF9933
     
+    // Background colors for deep dark theme
+    static let backgroundPrimary = Color(red: 0.05, green: 0.05, blue: 0.05)     // #0D0D0D
+    static let backgroundSecondary = Color(red: 0.08, green: 0.08, blue: 0.1)    // #141419
+    static let cardBackground = Color(red: 0.1, green: 0.1, blue: 0.12)          // #1A1A1F
+    
+    // Text and UI colors
+    static let textPrimary = Color.white
+    static let textSecondary = Color(white: 0.7)
+    static let border = Color(white: 0.15)
+    
+    // Priority colors
+    static let priorityHigh = Color(red: 1.0, green: 0.3, blue: 0.3)      // #FF4D4D
+    static let priorityMedium = Color(red: 1.0, green: 0.8, blue: 0.2)    // #FFCC33
+    static let priorityLow = Color(white: 0.6)                            // #999999
+    
+    // Color name initializer for backward compatibility
     init(_ name: String) {
         switch name {
         case "AccentBlue":
@@ -246,7 +259,7 @@ extension Color {
         case "CardBackground":
             self = .cardBackground
         default:
-            self = .gray 
+            self = .gray
         }
     }
 }
